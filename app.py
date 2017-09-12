@@ -25,11 +25,11 @@ def palindrome():
             # if the string reversed is the same store and print result
             pal = Palindrome(cleaned_str)
             PALINDROME_LIST.append(pal.serialize())
-            return jsonify({"string": string_in, "isPalindrome": True})
+            return 'true\n'
 
         elif cleaned_str != cleaned_str[::-1]:
             # if the string reversed is not the same just print result
-            return jsonify({"string": string_in, "isPalindrome": False})
+            return 'false\n'
 
     elif request.method == "GET":
         # if call is GET return the last 10 entries within 10 mins
