@@ -38,14 +38,24 @@ python3 setup.py install
 python3 tests.py
 ```
 
-Access the POST endpoint to see if a string is palindrome:
+## How to
+
+To begin the application run
+```
+python3 app.py
+```
+To access go to "http://localhost:5000/palindromes"
+
+Access the POST endpoint to see if a string is palindrome run the following command from the command line on UNIX systems
 ```
 curl -X POST "http://localhost:5000/palindromes?string=word"
 ```
-Replace word with the string to be test
+Replace word with the string to be test.
+This will return true if the string is a palindrome and false otherwise. 
 
-To return a list of the last 10 palindromes within 10 minutes run:
+To return a list of the last 10 palindromes within 10 minutes run on the command line for UNIX systems
 ```
 curl "http://localhost:5000/palindromes"
 ```
+
 
